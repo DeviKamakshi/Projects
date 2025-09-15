@@ -23,26 +23,26 @@
 
 
 📊 Tableau Dashboards
-6. Customer Complaint Dashboard
+1. Customer Complaint Dashboard
 
 🔗 https://public.tableau.com/views/Customer_17000250110520/CUSTOMERCOMPLAINTDASHBOARD?:language=en-US&:display_count=n&:origin=viz_share_link
 
-7. Ecommerce Sales Dashboard
+2. Ecommerce Sales Dashboard
 
 🔗 https://public.tableau.com/views/EcommerceSalesDashboard_16992555013500/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link
 
-8. HR Dashboard
+3. HR Dashboard
 
 🔗 https://public.tableau.com/views/HRDashboard_16990798123740/HRDashboard?:language=en-US&:display_count=n&:origin=viz_share_link
 
-9. IPL Analysis Dashboard
+4. IPL Analysis Dashboard
 
 🔗 https://public.tableau.com/views/IPLAnalysis_16995990337160/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link
 
-10. Credit Card Complaints Dashboard
+5. Credit Card Complaints Dashboard
 
 🔗 https://public.tableau.com/views/CreditCardComplaintsDashboard_17002825557490/CreditCardComplaintsDashboard?:language=en-US&:display_count=n&:origin=viz_share_link
 
-11. Adidas Sales by State
+6. Adidas Sales by State
 
 🔗 https://public.tableau.com/views/AdidasSalesbyState/AdidasSalesAnalysis?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
