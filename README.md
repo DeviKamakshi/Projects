@@ -1,3 +1,7 @@
+Machine Learning Projects
+1. News Topic Classification - Built a news topic classification system using TF-IDF + Naïve Bayes and a fine-tuned DistilBERT model, then evaluated both using weighted F1 score to understand performance trade-offs between classical ML and transformers.
+
+
 🎨 Figma Projects
 1. Digital Wallet
 
