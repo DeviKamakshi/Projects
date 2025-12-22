@@ -1,6 +1,6 @@
 🔬 Machine Learning Projects
 1. News Topic Classification (NLP)
-https://github.com/DeviKamakshi/Projects/blob/main/News%20Topic%20Classification.ipynb
+[https://github.com/DeviKamakshi/Projects/blob/main/News%20Topic%20Classification.ipynb](https://github.com/DeviKamakshi/Projects/blob/main/News%20Topic%20Classification.ipynb)
 
 Description:
 Built an end-to-end NLP pipeline for large-scale news topic classification using TF-IDF + Naïve Bayes and fine-tuned BERT to improve semantic understanding. Achieved significant performance gains through preprocessing, hyperparameter tuning, and evaluation using F1-score and precision–recall metrics.
