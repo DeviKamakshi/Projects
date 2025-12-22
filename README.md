@@ -1,4 +1,4 @@
-<img width="469" height="64" alt="image" src="https://github.com/user-attachments/assets/92657e39-b361-47ac-b561-227f9484b89a" />🔬 Machine Learning Projects
+🔬 Machine Learning Projects
 1. News Topic Classification (NLP)
 [https://github.com/DeviKamakshi/Projects/blob/main/News%20Topic%20Classification.ipynb](https://github.com/DeviKamakshi/Projects/blob/main/News%20Topic%20Classification.ipynb)
 
