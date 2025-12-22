@@ -1,11 +1,10 @@
-🔬 Machine Learning Projects
+<img width="469" height="64" alt="image" src="https://github.com/user-attachments/assets/92657e39-b361-47ac-b561-227f9484b89a" />🔬 Machine Learning Projects
 1. News Topic Classification (NLP)
 [https://github.com/DeviKamakshi/Projects/blob/main/News%20Topic%20Classification.ipynb](https://github.com/DeviKamakshi/Projects/blob/main/News%20Topic%20Classification.ipynb)
 
-Description:
-Built an end-to-end NLP pipeline for large-scale news topic classification using TF-IDF + Naïve Bayes and fine-tuned BERT to improve semantic understanding. Achieved significant performance gains through preprocessing, hyperparameter tuning, and evaluation using F1-score and precision–recall metrics.
+  Built a text classification pipeline using TF-IDF and Naive Bayes as a baseline, then fine-tuned a BERT-based model to improve classification accuracy and weighted F1 score on news article       text.
 
-Tech Stack: Python, NLP, BERT, TF-IDF, Scikit-learn, Hugging Face
+  Tech Stack: Python, NLP, BERT, TF-IDF, Scikit-learn, Hugging Face
 
 🎨 Figma Projects
 1. Digital Wallet
