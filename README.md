@@ -6,6 +6,12 @@
 
   Tech Stack: Python, NLP, BERT, TF-IDF, Scikit-learn, Hugging Face
 
+  2. Customer Segmentation
+  https://github.com/DeviKamakshi/Projects/blob/main/Customer%20Segmentation.ipynb
+  
+  Performed behavioral customer segmentation using K-Means and hierarchical clustering on real e-commerce data. Applied RFM feature engineering, silhouette-based model selection, and PCA           visualization to derive actionable customer personas for personalization strategies.
+  
+  Tech Stack: Python, Pandas, NumPy, Scikit-learn, K-Means, Hierarchical Clustering, PCA, Data Visualization
 
 
 
