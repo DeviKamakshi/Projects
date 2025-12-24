@@ -13,6 +13,14 @@
   
   Tech Stack: Python, Pandas, NumPy, Scikit-learn, K-Means, Hierarchical Clustering, PCA, Data Visualization
 
+  3. Product Review Clustering
+
+https://github.com/DeviKamakshi/Projects/blob/main/Product%20Review%20Clustering%20.ipynb
+
+Applied TF-IDF + K-Means to Amazon reviews to extract keyword-driven clusters and sentiment patterns, with PCA visualization and LDA topic validation.
+
+Tech Stack: Python, NLP, TF-IDF, K-Means, Scikit-learn
+
 
 
 📊 Tableau Dashboards
