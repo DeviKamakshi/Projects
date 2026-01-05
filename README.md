@@ -21,7 +21,13 @@ Applied TF-IDF + K-Means to Amazon reviews to extract keyword-driven clusters an
 
 Tech Stack: Python, NLP, TF-IDF, K-Means, Scikit-learn
 
+4. Stent Placement Risk Prediction
 
+https://github.com/DeviKamakshi/Projects/blob/main/Stent%20Placement%20Risk%20Prediction.ipynb
+
+Built clinical risk prediction models using Random Forests and feedforward neural networks (MLP) to estimate adverse outcomes following coronary stent placement. Addressed class imbalance with SMOTE and class-weighted loss, evaluated performance using ROC-AUC and Precision–Recall AUC, and stratified patients into Low / Medium / High risk groups using percentile-based thresholds. Applied SHAP to interpret global feature importance and explain individual patient risk predictions.
+
+Tech Stack: Python, Scikit-learn, PyTorch, Imbalanced-learn (SMOTE), SHAP, Pandas, Matplotlib
 
 📊 Tableau Dashboards
 1. Customer Complaint Dashboard
