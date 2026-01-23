@@ -30,7 +30,7 @@ Developed clinical risk prediction models using Random Forests and feedforward n
 Tech Stack: Python, Scikit-learn, PyTorch, Imbalanced-learn (SMOTE), SHAP, Pandas, Matplotlib
 
 
-Literature Review done for this project : CS200W_Literature Review_Revisions_DeviKamakshi.pdf
+Literature Review done for this project : [CS200W_Literature Review_Revisions_DeviKamakshi.pdf](https://github.com/DeviKamakshi/Projects/blob/main/CS200W_Literature%20Review_Revisions_DeviKamakshi.pdf)
 
 
 📊 Tableau Dashboards
