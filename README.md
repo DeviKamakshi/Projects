@@ -28,6 +28,8 @@ https://github.com/DeviKamakshi/Projects/blob/main/Stent%20Placement%20Risk%20Pr
 Developed clinical risk prediction models using Random Forests and feedforward neural networks, handled class imbalance with SMOTE and class-weighted loss, evaluated with ROC and precision–recall analysis, and used SHAP to interpret feature contributions and patient-level risk stratification.
 
 Tech Stack: Python, Scikit-learn, PyTorch, Imbalanced-learn (SMOTE), SHAP, Pandas, Matplotlib
+
+
 Literature Review done for this project : CS200W_Literature Review_Revisions_DeviKamakshi.pdf
 
 
