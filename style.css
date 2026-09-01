@@ -1,0 +1,312 @@
+/* --------------------------------------------------------------------------
+   HydroShield AI - Clean Emergency Response Dashboard Stylesheet
+   -------------------------------------------------------------------------- */
+
+:root {
+  --bg-dark: #07090e;
+  --bg-panel: #0f172a;
+  --border-panel: rgba(255, 255, 255, 0.08);
+
+  --text-main: #ffffff;
+  --text-muted: #94a3b8;
+  --accent-cyan: #38bdf8;
+
+  --status-green: #10b981;
+  --status-amber: #f59e0b;
+  --status-red: #ef4444;
+
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --radius-md: 8px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg-dark);
+  color: var(--text-main);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Header */
+.app-header {
+  height: 56px;
+  padding: 0 20px;
+  background: #0f172a;
+  border-bottom: 1px solid var(--border-panel);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  font-size: 20px;
+  color: var(--accent-cyan);
+}
+
+.brand-title {
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.location-select {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-panel);
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+}
+
+.agent-status-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.status-normal { background: rgba(16, 185, 129, 0.15); color: var(--status-green); }
+.status-advisory-theme { background: rgba(245, 158, 11, 0.2); color: var(--status-amber); }
+.status-danger-theme { background: rgba(239, 68, 68, 0.25); color: var(--status-red); }
+
+/* Dashboard Grid */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 260px 1fr 310px;
+  gap: 12px;
+  padding: 12px 20px;
+  flex: 1;
+  min-height: 0;
+}
+
+.panel {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-panel);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.panel-body {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+}
+
+/* Info Cards */
+.info-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-panel);
+  border-radius: 6px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.info-label {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.info-value {
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Threat Card */
+.threat-card {
+  border-radius: 6px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.threat-title {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.threat-desc {
+  font-size: 11px;
+  color: #cbd5e1;
+  line-height: 1.3;
+}
+
+.level-safe { background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.3); }
+.level-safe .threat-title { color: var(--status-green); }
+
+.level-warning { background: rgba(245, 158, 11, 0.15); border: 1px solid rgba(245, 158, 11, 0.4); }
+.level-warning .threat-title { color: var(--status-amber); }
+
+.level-danger { background: rgba(239, 68, 68, 0.2); border: 1px solid rgba(239, 68, 68, 0.5); }
+.level-danger .threat-title { color: var(--status-red); }
+
+/* Scenario Toggle */
+.scenario-toggle {
+  display: flex;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.btn-scenario {
+  flex: 1;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-panel);
+  color: var(--text-muted);
+  cursor: pointer;
+}
+.btn-scenario.active { background: var(--accent-cyan); color: #04060a; border-color: var(--accent-cyan); }
+
+/* Center Panel */
+.panel-center {
+  display: flex;
+  flex-direction: column;
+}
+
+.safety-guide-card {
+  padding: 12px 16px;
+  background: rgba(16, 185, 129, 0.08);
+  border-bottom: 1px solid var(--border-panel);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.guide-header {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--status-green);
+}
+
+.guide-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 12px;
+  color: #e2e8f0;
+}
+
+.map-container {
+  flex: 1;
+  background: #04060a;
+  position: relative;
+  overflow: hidden;
+}
+
+#flood-map-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.gmaps-action-bar {
+  padding: 8px 12px;
+  background: rgba(15, 23, 42, 0.95);
+  border-top: 1px solid var(--border-panel);
+  display: flex;
+  justify-content: center;
+}
+
+.btn-gmaps-link {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: #10b981;
+  color: #04060a;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Agent Panel Right */
+.agent-panel-body {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  min-height: 0;
+}
+
+.activity-feed-header {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.agent-log-container {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--border-panel);
+  border-radius: 6px;
+  padding: 8px;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.log-entry {
+  padding: 4px 6px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.03);
+}
+.log-entry.system { color: #e2e8f0; }
+.log-entry.thinking { color: #c084fc; }
+.log-entry.tool-call { color: #38bdf8; }
+.log-entry.alert { color: #f87171; background: rgba(239, 68, 68, 0.2); }
+
+.phone-alert-box {
+  background: rgba(245, 158, 11, 0.06);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  border-radius: 6px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.phone-alert-header {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--status-amber);
+}
+
+.phone-alert-text {
+  font-size: 11px;
+  color: #e2e8f0;
+  line-height: 1.3;
+}
