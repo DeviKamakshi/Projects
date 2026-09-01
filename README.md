@@ -1,100 +1,81 @@
-# HydroShield AI: Early Warning & Route Guidance for Flash Floods
+🔬 Machine Learning Projects
+1. News Topic Classification (NLP)
+  [https://github.com/DeviKamakshi/Projects/blob/main/News%20Topic%20Classification.ipynb](https://github.com/DeviKamakshi/Projects/blob/main/News%20Topic%20Classification.ipynb)
 
-**All Things Agentic Hackathon Submission**  
-**Tech Stack**: Google Gemini Agent ADK, Google Maps Directions API, Open-Meteo REST API, Python 3, JavaScript (ES6)
+  Built a text classification pipeline using TF-IDF and Naive Bayes as a baseline, then fine-tuned a BERT-based model to improve classification accuracy and weighted F1 score on news article       text.
 
----
+  Tech Stack: Python, NLP, BERT, TF-IDF, Scikit-learn, Hugging Face
 
-## Project Overview
+  2. Customer Segmentation
+  https://github.com/DeviKamakshi/Projects/blob/main/Customer%20Segmentation.ipynb
+  
+  Performed behavioral customer segmentation using K-Means and hierarchical clustering on real e-commerce data. Applied RFM feature engineering, silhouette-based model selection, and PCA           visualization to derive actionable customer personas for personalization strategies.
+  
+  Tech Stack: Python, Pandas, NumPy, Scikit-learn, K-Means, Hierarchical Clustering, PCA, Data Visualization
 
-### What Happened
-On August 26, 2026, a massive glacier and rock collapse occurred at Langtang Lirung in Langtang National Park, Nepal. The resulting debris avalanche triggered a sudden 30-foot surge of water, mud, and ice down the Bhote Koshi, Lende, and Trishuli river corridors across Rasuwa, Nuwakot, and Dhading districts. 
+  3. Product Review Clustering
 
-More than 900 workers at local hydropower plants and hundreds of residents in valley settlements were caught unprepared. The primary failure wasn't just the sheer volume of water, but the absence of immediate, actionable warning before low-altitude valley passes were cut off.
+https://github.com/DeviKamakshi/Projects/blob/main/Product%20Review%20Clustering%20.ipynb
 
-### What We Built
-HydroShield AI is a real-time emergency monitoring system built around an autonomous agent loop. It continuously ingests river stage height and rainfall telemetry, evaluates hazard thresholds, and translates complex environmental metrics into direct, plain-English instructions. 
+Applied TF-IDF + K-Means to Amazon reviews to extract keyword-driven clusters and sentiment patterns, with PCA visualization and LDA topic validation.
 
-When a flood or surge event occurs, the system flags dangerous river valley crossings as impassable and uses the Google Maps Directions API to route users from low-lying valley floors to high-elevation shelters.
+Tech Stack: Python, NLP, TF-IDF, K-Means, Scikit-learn
 
----
+4. Stent Placement Risk Prediction
 
-## Architecture & System Design
+https://github.com/DeviKamakshi/Projects/blob/main/Stent%20Placement%20Risk%20Prediction.ipynb
 
-```
-+------------------------------------+
-|  Open-Meteo REST Weather Satellite |
-+----------------─┬------------------+
-                  | (20-second async polling)
-                  v
-+------------------------------------+      +--------------------------------+
-|  HydroShield Core Telemetry Engine | ---> | Google Maps Directions API     |
-|  (State, HTML5 Canvas, DOM)        |      | (Turn-by-turn routing app link)|
-+----------------─┬------------------+      +--------------------------------+
-                  |
-                  v
-+------------------------------------+
-|  Gemini Agent Loop                 |
-|  1. Observe telemetry deltas       |
-|  2. Evaluate risk tier (0 to 3)    |
-|  3. Execute tools & update UI      |
-+------------------------------------+
-```
+Developed clinical risk prediction models using Random Forests and feedforward neural networks, handled class imbalance with SMOTE and class-weighted loss, evaluated with ROC and precision–recall analysis, and used SHAP to interpret feature contributions and patient-level risk stratification.
 
-### Core Components
+Tech Stack: Python, Scikit-learn, PyTorch, Imbalanced-learn (SMOTE), SHAP, Pandas, Matplotlib
 
-1. **Telemetry Pipeline (`simulation.js`)**:
-   - Asynchronously queries the Open-Meteo REST API every 20 seconds.
-   - Measures precipitation rate ($R$ in mm/h), topsoil moisture saturation ($S$ as a percentage), and calculates river stage height ($H$ in meters).
-   - Manages distinct origin coordinates ($28.2150^\circ\text{N}, 85.3850^\circ\text{E}$) and high-ground destination coordinates ($28.2580^\circ\text{N}, 85.4200^\circ\text{E}$).
 
-2. **Agentic Reasoning Loop (`agent.js`)**:
-   - Implements an Observe-Reason-Act pattern inspired by the Google Gemini Agent Development Kit (ADK).
-   - Classifies risk levels into four tiers:
-     - Tier 0: Normal baseline ($H < 3.0\text{m}$)
-     - Tier 1: Flood Advisory ($3.0\text{m} \le H < 4.2\text{m}$)
-     - Tier 2/3: Flood Warning / Emergency Danger ($H \ge 4.2\text{m}$ or rapid surge)
-   - Automatically executes response actions: updates safety status text, flags flooded river crossings, and generates emergency broadcast messages.
+Literature Review done for this project : [CS200W_Literature Review_Revisions_DeviKamakshi.pdf](https://github.com/DeviKamakshi/Projects/blob/main/CS200W_Literature%20Review_Revisions_DeviKamakshi.pdf)
 
-3. **Spatial Route Calculation & Visualization (`map.js` & `main.js`)**:
-   - Renders a real-time spatial topographic map on an HTML5 canvas, displaying river channels, radar sweep lines, flood hazard polygons, and evacuation vectors.
-   - Interfaces with the Google Maps Directions API to construct driving routes from low valley origins to high-ground destinations, providing a 1-tap deep link into the Google Maps app.
 
----
+📊 Tableau Dashboards
+1. Customer Complaint Dashboard
 
-## Google Technologies Used
+🔗 https://public.tableau.com/views/Customer_17000250110520/CUSTOMERCOMPLAINTDASHBOARD?:language=en-US&:display_count=n&:origin=viz_share_link
 
-- **Google Gemini Agent Architecture (ADK)**: Formulated the autonomous reasoning loop for continuous environmental evaluation and tool execution.
-- **Google Maps Directions API**: Calculates driving routes around blocked river crossings.
-- **Google Maps Mobile Integration**: Deep-links origin and destination parameters directly into the Google Maps mobile application (`https://www.google.com/maps/dir/?api=1&origin=...&destination=...`).
-- **Google Cloud Platform / Cloud Run**: Scalable container hosting for low-latency backend execution.
+2. Ecommerce Sales Dashboard
 
----
+🔗 https://public.tableau.com/views/EcommerceSalesDashboard_16992555013500/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link
 
-## Real-World Impact & Future Work
+3. HR Dashboard
 
-### Future API Integrations
-- **Google Maps Traffic API**: In corporate or regional deployments, querying live congestion data will allow the agent to route evacuees away from traffic gridlocks during panicked evacuations.
-- **Google Maps Road Hazards & Closures API**: Direct ingestion of road barrier statuses will allow automatic updates to route calculation when landslides occur.
-- **Elevation APIs**: Integrating fine-grained digital elevation models will ensure candidate evacuation paths consistently move uphill.
+🔗 https://public.tableau.com/views/HRDashboard_16990798123740/HRDashboard?:language=en-US&:display_count=n&:origin=viz_share_link
 
----
+4. IPL Analysis Dashboard
 
-## How to Test the Project
+🔗 https://public.tableau.com/views/IPLAnalysis_16995990337160/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link
 
-### Running Locally
-1. Clone the repository and navigate to the root directory:
-   ```bash
-   cd flash-flood-agent
-   ```
-2. Start the lightweight Python web server:
-   ```bash
-   python3 server.py
-   ```
-3. Open `http://localhost:8080` in your web browser.
+5. Credit Card Complaints Dashboard
 
-### Test Scenarios
-- **Normal Day**: Select **Langtang / Trishuli River, Nepal** and click **Normal**. The dashboard shows green status and all roads clear.
-- **Storm Surge**: Click **Storm Surge** to observe risk tier escalation and advisory notices.
-- **Glacial Debris Avalanche**: Click **Debris Avalanche** to trigger a simulated 30-foot river surge. The system updates the status to **FLOOD EMERGENCY DANGER**, flags the Trishuli valley road as impassable, updates the safe route to **Himalayan High Ridge Plateau**, and logs agent actions in the activity feed.
-- **Google Maps Navigation**: Click **Open Turn-by-Turn Route in Google Maps App** at the bottom of the map to verify origin and destination coordinates in Google Maps.
+🔗 https://public.tableau.com/views/CreditCardComplaintsDashboard_17002825557490/CreditCardComplaintsDashboard?:language=en-US&:display_count=n&:origin=viz_share_link
+
+6. Adidas Sales by State
+
+🔗 https://public.tableau.com/views/AdidasSalesbyState/AdidasSalesAnalysis?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
+  
+
+🎨 Figma Projects
+1. Digital Wallet
+
+🔗 https://www.figma.com/proto/d6gdFJpqZKYsdRJQImMkCS/Digital-Wallet?type=design&node-id=2-82&t=ZFRRWsQ3YjMuKEAC-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=2%3A82
+
+2. Coffee and Donuts Ordering
+
+🔗 https://www.figma.com/proto/VxYdxD6Ta2spo3fhXKQMe2/Coffee-and-Donuts-Ordering?type=design&node-id=4-999&t=FJYsQ3HIn6ZZ7pKI-1&scaling=scale-down&page-id=4%3A743&mode=design
+
+3. Chat App
+
+🔗 https://www.figma.com/proto/kz6te4LcWBgV6A8uDsTglZ/Chat?node-id=1-81&starting-point-node-id=1%3A81&mode=design&t=8MRrJ8ypchX8RyMy-1
+
+4. Flight Booking
+
+🔗 https://www.figma.com/proto/fIp4iG05DJYXlIn2nAQYSZ/Flight-Booking?type=design&node-id=2-45&t=SkkNesMS2PvySQ5j-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=2%3A45&mode=design
+
+5. Teacher's Dashboard
+
+🔗 https://www.figma.com/proto/wlf8Lcd1WA9R7kbmoHMvPK/Teacher's-Dashboard?type=design&node-id=2-101&t=cEqE8lLUVvd6eRT7-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=2%3A101&mode=design
